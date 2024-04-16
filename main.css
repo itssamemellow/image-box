@@ -13,6 +13,8 @@ main {
 
 section {
   background-color: #eee5e9;
+  background: linear-gradient(-45deg, #ff0000, #ffffff, #00ffee);
+  background-size: 400% 400%;
   display: grid;
   border-radius: 1rem;
 
@@ -23,8 +25,37 @@ section {
   min-height: 320px;
   height: auto;
   box-shadow: 0 0 30px 3px #999;
+  transition: all 0.1s;
+  animation: load 3s infinite;
 
   img {
     border-radius: 1rem;
+    transition: all 0.5s;
+
+    &.hide {
+      opacity: 0;
+      /*filter: saturate(0);*/
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    background-size: 100% 100%;
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+@keyframes load {
+  0%,
+  100% {
+    background-size: 400% 400%;
+  }
+
+  50% {
+    background-size: 100% 100%;
   }
 }
