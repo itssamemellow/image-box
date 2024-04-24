@@ -28,6 +28,10 @@ section {
   transition: all 0.1s;
   animation: load 3s infinite;
 
+  &:has(img.hide) {
+    cursor: not-allowed;
+  }
+
   img {
     border-radius: 1rem;
     transition: all 0.5s;
