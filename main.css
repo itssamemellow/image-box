@@ -83,7 +83,7 @@ section {
   }
 }
 
-@media (max-width: 710) {
+@media (max-width: 710px) {
   #foto {
     height: auto;
   }
